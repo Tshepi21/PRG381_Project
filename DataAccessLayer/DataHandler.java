@@ -1,4 +1,4 @@
-package BusinessLogicLayer;
+package DataAccessLayer;
 
 public class DataHandler {
     public DataHandler(){}

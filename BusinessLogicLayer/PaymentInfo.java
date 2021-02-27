@@ -1,6 +1,6 @@
-class PaymentInfor 
-{
+package BusinessLogicLayer;
 
+class PaymentInfo {
    private int payid;
    private int bookingnr;
    public static  double priceperguest=50;
@@ -9,7 +9,7 @@ class PaymentInfor
    private int noofguest;
    private int discount;
 
-   public PaymentInfor(int payid,int bookingid, int totalprice,int percentagepayed,int noofguest,int disount)
+   public PaymentInfo(int payid,int bookingid, int totalprice,int percentagepayed,int noofguest,int disount)
    {
        this.payid=payid;
        this.bookingnr=bookingid;
@@ -22,7 +22,7 @@ class PaymentInfor
 
  
 //default constructor
-public PaymentInfor()
+public PaymentInfo()
 {
  noofguest=0;
  totalprice=0;
