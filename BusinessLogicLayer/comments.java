@@ -1,5 +1,5 @@
-package DataAccessLayer;
+package BusinessLogicLayer;
 
 public class comments {
-    //Data access
+    //Business Logic
 }
