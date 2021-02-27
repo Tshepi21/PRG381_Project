@@ -6,10 +6,19 @@ class EventDetails
     private int clientid;
     private String eventype;
     private int addressid;
+    private string eventdate
     private int  noofadults; 
     private int  noofkids;
     private String foodselection;
     private String decoration;
+    public String geteventdate()
+    {
+        return eventdate;
+    }
+    public void seteventdate(String eventdate)
+    {
+        this.eventdate= eventdate;
+    }
     
 //only reads the booking number since its automated
      public int getbookingnr()
@@ -72,7 +81,7 @@ class EventDetails
      {
 
      }
-     public EventDetails( int bookingnr, int clientid,String eventype, int addressid,int noofadults,int noofkids,String foodselection,String decoration)
+     public EventDetails( int bookingnr, int clientid,String eventype,String eventdate, int addressid,int noofadults,int noofkids,String foodselection,String decoration)
      {
      this.bookingnr=bookingnr;
      this.clientid=clientid;
@@ -81,6 +90,7 @@ class EventDetails
      this.noofadults=noofkids;
      this.foodselection=foodselection;
      this.decoration=decoration;
+     this.eventdate= eventdate;
 
      }
 
