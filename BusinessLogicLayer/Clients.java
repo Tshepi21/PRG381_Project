@@ -58,7 +58,8 @@ public class Clients {
         }
         public Clients(){}
 
-        public Clients(String firstname, String lastname, int age, String phoneNo, String email, String password){
+        public Clients(int clientID, String firstname, String lastname, int age, String phoneNo, String email, String password){
+            this.clientID = clientID;
             this.firstname = firstname;
             this.lastname = lastname;
             this.age = age;

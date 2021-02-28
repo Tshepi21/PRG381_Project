@@ -1,10 +1,17 @@
 package BusinessLogicLayer;
 
 public class Employees {
+    int employeeID;
     String empfirstname;
     String emplastname;
     String emppassword;
 
+    public int getEmployeeID(){
+        return employeeID;
+    }
+    public void setEmployeeID(int employeeID){
+        this.employeeID = employeeID;
+    }
     public String getFirstname(){
         return empfirstname;
     }
