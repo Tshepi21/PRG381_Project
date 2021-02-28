@@ -268,7 +268,7 @@ public class DataHandler {
               for (EventDetails eventDetails : evendetails) {
                   for (Clients clients : clientlist) {
                       if (clients.getClientID() == eventDetails.getclientid()) {
-                          oo.setclientid(cc.setclientid);
+                          oo.setclientid(cc.getClientID());
                           oo.setbookingnr(linecount + 121);
            
                       }
@@ -298,5 +298,5 @@ public class DataHandler {
 
 
 
-}
+}}
 
