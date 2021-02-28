@@ -1,10 +1,12 @@
 package BusinessLogicLayer;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import DataAccessLayer.DataHandler;
 
 public class Clients {
+        int clientID;
         String firstname;
         String lastname;
         String email;
@@ -12,6 +14,12 @@ public class Clients {
         String phoneNo;
         int age;
 
+        public int getClientID(){
+            return clientID;
+        }
+        public void setClientID(int clientID){
+            this.clientID = clientID;
+        }
         public String getFirstname(){
             return firstname;
         }
