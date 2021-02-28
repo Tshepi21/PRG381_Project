@@ -295,8 +295,6 @@ public class DataHandler {
             e.printStackTrace();
         }
       }
-
-
-
-}}
+    }
+}
 
