@@ -6,7 +6,7 @@ class EventDetails
     private int clientid;
     private String eventype;
     private int addressid;
-    private string eventdate
+    private String eventdate;
     private int  noofadults; 
     private int  noofkids;
     private String foodselection;
