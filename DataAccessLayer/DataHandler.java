@@ -22,7 +22,7 @@ public class DataHandler {
     Clients client = new Clients();
     
     public void AddClient() throws IOException {
-        File file = new File("C:\\Users\\Aura\\Desktop\\PRG381 Project\\Clients.txt");
+        File file = new File(filepath);
         FileWriter fw = new FileWriter(file);
         PrintWriter pw = new PrintWriter(fw);
         
