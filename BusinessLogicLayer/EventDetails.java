@@ -1,8 +1,7 @@
 //import java.util.Scanner;
 package BusinessLogicLayer;
-public class EventDetails
-{
-    private int bookingnr;
+public class EventDetails{
+     private int bookingnr;
     private int clientid;
     private String eventype;
     private int addressid;
@@ -20,10 +19,18 @@ public class EventDetails
      // bookingnr=interger.parse(scannner.nextLine());
           return bookingnr;
      }
+     public void setbookingnr(int bookingnr)
+     {
+          this.bookingnr=bookingnr;
+     }
 //only reads the booking number since its automated
      public int getclientid()
      { 
           return clientid;
+     }
+     public void setclientid(int id)
+     {
+          this.clientid=id;
      }
      // get and sets cause it will read and write the event type
      public String geteventtype()
@@ -32,7 +39,7 @@ public class EventDetails
      }
      public void seteventtype(String eventype)
      {
-     this.eventype=eventype;
+          this.eventype=eventype;
      }
      public int getaddressid()
      { 
@@ -45,7 +52,7 @@ public class EventDetails
      }
      public void setnoofadults(int noofadults)
      {
-     this.noofadults=noofadults;
+          this.noofadults=noofadults;
      }
      public int getnoofkids()
      { 
@@ -53,7 +60,7 @@ public class EventDetails
      }
      public void setnoofkids(int noofkids)
      {
-     this.noofkids=noofkids;
+          this.noofkids=noofkids;
      }
      public String getfoodselection()
      { 
@@ -61,7 +68,7 @@ public class EventDetails
      }
      public void setfoodselection(String foodselection)
      {
-     this.foodselection=foodselection;
+          this.foodselection=foodselection;
      }
      public String getdecoration()
      { 
@@ -74,15 +81,14 @@ public class EventDetails
      }
      public EventDetails( int bookingnr, int clientid,String eventype, int addressid,int noofadults,int noofkids,String foodselection,String decoration)
      {
-     this.bookingnr=bookingnr;
-     this.clientid=clientid;
-     this.eventype=eventype;
-     this.addressid=addressid;
-     this.noofadults=noofkids;
-     this.foodselection=foodselection;
-     this.decoration=decoration;
+          this.bookingnr=bookingnr;
+          this.clientid=clientid;
+          this.eventype=eventype;
+          this.addressid=addressid;
+          this.noofadults=noofadults;
+          this.noofadults=noofkids;
+          this.foodselection=foodselection;
+          this.decoration=decoration;
 
      }
-
-    
 }
