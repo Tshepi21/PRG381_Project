@@ -208,7 +208,7 @@ public class DataHandler {
         int linecount = 0;
         if (file.exists()) {
             while (scann.hasNextLine()) {
-                String[] line = scann.nextLine().split("#");
+                String[] line = scann.nextLine().split(",");
                 evendetails.add(new EventDetails(Integer.parseInt(line[0]), Integer.parseInt(line[1]), line[2],
                         Integer.parseInt(line[3]), Integer.parseInt(line[4]), Integer.parseInt(line[5]), line[6],
                         line[7]));
