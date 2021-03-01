@@ -1,5 +1,10 @@
 package BusinessLogicLayer;
 
+import java.io.FileNotFoundException;
+import java.util.List;
+
+import DataAccessLayer.DataHandler;
+
 public class Address {
     Integer AddressID;
     Integer UnitNo;
@@ -69,5 +74,20 @@ public class Address {
         this.Suburb = Suburb;
         this.City = City;
         this.PhoneNo = PhoneNo;
+    }
+    public List<Address> addresses( ) throws FileNotFoundException{
+        DataHandler dh = new DataHandler();
+        List<Address> aList = dh.GetAddress();
+        if(!aList.isEmpty()){
+            return aList;
+        }
+        else{
+            return null;
+        }
+    }
+
+    public String ToString()
+    {
+        return AddressID+ " "+ UnitNo + " "+ Street+ " "+ Suburb+ " "+City+ " "+ PhoneNo;
     }
 }
