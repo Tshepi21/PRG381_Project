@@ -12,7 +12,7 @@ public class DataHandler {
         Scanner sc = new Scanner(file);
         while(sc.hasNextLine()){
             String[] line = sc.nextLine().split(",");
-            clist.add(new Clients(Integer.parseInt(line[0]),line[1],line[2],Integer.parseInt(line[3]),line[4],line[5],line[6]));
+            clist.add(new Clients(Integer.parseInt(line[0]),line[1],line[2],line[3],line[4],line[5],line[6]));
 
         }
         sc.close();
@@ -21,22 +21,24 @@ public class DataHandler {
 
     Clients client = new Clients();
     
+    
     public void AddClient() throws IOException {
         File file = new File(filepath);
-        FileWriter fw = new FileWriter(file);
+        FileWriter fw = new FileWriter(file,true);
         PrintWriter pw = new PrintWriter(fw);
         
         try (Scanner scan = new Scanner(System.in)) {
             if(file.exists()){
                 FileReader fr = new FileReader(file);
                 LineNumberReader lr = new LineNumberReader(fr);
-                int linecount = 0;
+                int linecount=0;
                 while(lr.readLine()!=null){
                     linecount++;
                 }
                 client.setClientID(linecount+1);
                 lr.close();
             }
+            
 
             System.out.print(" Enter firstName => ");
             String firstName = scan.nextLine();
@@ -47,7 +49,7 @@ public class DataHandler {
             client.setLastname(lastName);
 
             System.out.print(" How old are you? => ");
-            int age = scan.nextInt();
+            String age = scan.nextLine();
             client.setAge(age);
 
            System.out.print(" Enter email address => ");
@@ -64,8 +66,12 @@ public class DataHandler {
 
            pw.println(client.toString());
            pw.close();
-
+           
         }
+        DataHandler dh = new DataHandler();
+        dh.VerifyClientLogin();
+       
+           
     }
     Employees employee = new Employees();
 
@@ -99,20 +105,23 @@ public class DataHandler {
 
            pw.println(employee.toString());
            pw.close();
-
+           
         }
+        
     }
 
     public static Scanner x;
-    public void VerifyClientLogin(String email,String password){
-        boolean accepted = false;
-        while (accepted = false){
+    public void VerifyClientLogin(){
+        //boolean accepted = false;
+        //while (accepted = false){
+            
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter email => ");
-            email = scan.nextLine();
+            String email = scan.nextLine();
 
             System.out.print(" Enter password => ");
-            password = scan.nextLine();
+            
+            String password = scan.nextLine();
 
             scan.close();
 
@@ -138,18 +147,23 @@ public class DataHandler {
                     tempPassword = x.next();
 
                     if(tempEmail.trim().equals(email.trim()) && tempPassword.trim().equals(password)){
+                        System.out.println("User is Found: Welcome "+ tempname +" "+tempsurname);
                         found = true;
-                        accepted = true;
+                        //accepted = true;
+                        //Event Menu Must be added her
+                    }
+                    else{
+                        System.out.println("Error:User not Found");
                     }
                 }
                 x.close();
-                System.out.println("User is Found: Welcome "+ tempname +" "+tempsurname);
+                
                 
             } catch (Exception e) {
                 //TODO: handle exception
-                System.out.println("Error:User not Found");
+                
             }
-        }
+        //}
         
     }
     public void VerifyEmployeeLogin(String name, String surname, String password){
